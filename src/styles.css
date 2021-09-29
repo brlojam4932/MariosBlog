@@ -1,0 +1,52 @@
+body {
+  background-color: #1d1d1a;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: margin-left;
+  color: orange;
+  background-color: rgb(45, 37, 37);
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(230, 190, 190);
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #c1a846;
+}
+
+.navbar a:hover {
+  color: rgb(103, 196, 103);
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  color: rgb(157, 157, 225);
+}
+
+/* blog previews */
+.blog-preview {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: #c1a846;
+  margin-bottom: 8px;
+}
