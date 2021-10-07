@@ -13,6 +13,8 @@ const Home = () => {
   const [age, setAge] = useState(25);
 
   const [blogs, setBlogs] = useState(null);
+  const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
 
   const handleClick = (e) => {
     console.log("hello ninjas", e);
@@ -30,42 +32,56 @@ const Home = () => {
     console.log("you already clicked");
   };
 
+  /*
   const handleDelete = (id) => {
     // if blog Id is not equal to Id, it remians in array; else is moved to newBlogs
     const newBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlogs);
   };
+  */
 
   useEffect(() => {
-    fetch('http://localhost:8000/blogs')
+    setTimeout(()=> {
+      fetch('http://localhost:8000/blogs')
       .then(res => {
+        //console.log(res);
+        if(!res.ok) { // if response is NOT ok
+          throw Error("could not fetch the data for that resour")
+        }
         return res.json();
       })
       .then(data => {
         //console.log(data);
         setBlogs(data);
-      });
+        setIsPending(false);
+      })
+      .catch(err => {
+        //console.log(err.message)
+        setError(err.message);
+      })
+    }, 1000) // setTimeout is just a simulation so we simulate a longer timeframe to fetch data
+   
   }, []);
 
-    // logical && evaluates the left first -if false, it does not evaluate the right side; hence Null(false) - - if true, it evaluates the right side and prints to the screen
+  // logical && evaluates the left first -if false, it does not evaluate the right side; hence Null(false) - - if true, it evaluates the right side and prints to the screen
   return (
     <div className="home">
-       {blogs && <BlogList
-          blogs={blogs}
-          title="All Blogs!"
-          handleDelete={handleDelete} />}
+      { error && <div>{ error} </div> }
+      {isPending && <div>Loading...</div>}
+      {blogs && <BlogList
+        blogs={blogs}
+        title="All Blogs!" />}
 
-          {blogs &&<BlogList
-          blogs={blogs.filter((blog) => blog.author === "mario")}
-          title="Mario's Blogs"
-          handleDelete={handleDelete}
-        />}
+      {isPending && <div>Loading...</div>}
+      {blogs && <BlogList
+        blogs={blogs.filter((blog) => blog.author === "mario")}
+        title="Mario's Blogs" />}
 
-         <button onClick={() => setNames("Luigi")}>Change name</button>
-        <p>{names} </p>
-        <CondRen />
+      <button onClick={() => setNames("Luigi")}>Change name</button>
+      <p>{names} </p>
+      <CondRen />
     </div>
-    
+
   );
 };
 
