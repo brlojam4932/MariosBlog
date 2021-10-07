@@ -3,7 +3,7 @@ import { useState } from "react";
 /////////////CONDITIONAL RENDERING////////////
 
 const CondRen = () => {
-  const employees = ["Anthony", "George", "Julie"];
+  const employees = ["Anthony", "Ben", "Julie"];
   // we use a state variable
   //const isLoggedIn = false;
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -23,7 +23,7 @@ const CondRen = () => {
         </div>
       )}
       {isLoggedIn ? (
-        <h1> Hello, Anthony </h1>
+        <h1> Hello, Ben </h1>
       ) : (
         <div>
           <h1>Please log into your account</h1>
