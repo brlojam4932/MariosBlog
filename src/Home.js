@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 import CondRen from "./condRend";
+// here we set up a watch something...
+// npx json-server --watch src/data/db.json --port 8000
 
 const Home = () => {
   //let names = "mario";
@@ -10,16 +12,7 @@ const Home = () => {
   const [names, setNames] = useState("mario");
   const [age, setAge] = useState(25);
 
-  const [blogs, setBlogs] = useState([
-    { title: "My new website", body: "lorem ipsum...", author: "mario", id: 1 },
-    { title: "Welcome Party", body: "lorem ipsum...", author: "ben", id: 2 },
-    {
-      title: "Web Dev top tips",
-      body: "lorem ipsum...",
-      author: "mario",
-      id: 3
-    }
-  ]);
+  const [blogs, setBlogs] = useState(null);
 
   const handleClick = (e) => {
     console.log("hello ninjas", e);
@@ -44,48 +37,37 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log("use effeect run");
-    console.log(names);
-  }, [names]);
+    fetch('http://localhost:8000/blogs')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        //console.log(data);
+        setBlogs(data);
+      });
+  }, []);
 
+    // logical && evaluates the left first -if false, it does not evaluate the right side; hence Null(false) - - if true, it evaluates the right side and prints to the screen
   return (
     <div className="home">
-      <h2>Hompage</h2>
-      <p>
-        {names} is {age} years old{" "}
-      </p>
-      <button onClick={handleClick}>Click Me</button>
-      <button
-        onClick={(e) => {
-          handleClickMeAgain("mario", e);
-        }}
-      >
-        Click Me Again
-      </button>
-      <button onClick={handleThirdButton}>Third Button</button>
-
-      <div className="home">
-        <BlogList
+       {blogs && <BlogList
           blogs={blogs}
           title="All Blogs!"
-          handleDelete={handleDelete}
-        />
-        <br />
+          handleDelete={handleDelete} />}
 
-        <BlogList
+          {blogs &&<BlogList
           blogs={blogs.filter((blog) => blog.author === "mario")}
           title="Mario's Blogs"
           handleDelete={handleDelete}
-        />
-        <br />
-        <button onClick={() => setNames("Luigi")}>Change name</button>
-        <p>{names} </p>
+        />}
 
-        <br />
+         <button onClick={() => setNames("Luigi")}>Change name</button>
+        <p>{names} </p>
         <CondRen />
-      </div>
     </div>
+    
   );
 };
 
 export default Home;
+

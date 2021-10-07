@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+/////////////CONDITIONAL RENDERING////////////
+
 const CondRen = () => {
-  const employees = ["Anthony", "George"];
+  const employees = ["Anthony", "George", "Julie"];
   // we use a state variable
   //const isLoggedIn = false;
   const [isLoggedIn, setLoggedIn] = useState(false);
