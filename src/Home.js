@@ -14,7 +14,7 @@ const Home = () => {
 
   const [blogs, setBlogs] = useState(null);
   const [isPending, setIsPending] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); // we store the error in a state; to output to the browser
 
   const handleClick = (e) => {
     console.log("hello ninjas", e);
@@ -44,20 +44,26 @@ const Home = () => {
     setTimeout(()=> {
       fetch('http://localhost:8000/blogs')
       .then(res => {
-        //console.log(res);
+        //console.log(res); // response object
+
+        // this allows us to get back a "response" from the object
+        // if the data does not exist, the response is not okay
+        // ex. fetch('http://localhost:8000/blah blah blah')
         if(!res.ok) { // if response is NOT ok
-          throw Error("could not fetch the data for that resour")
+          throw Error("could not fetch the data for that resource")
         }
         return res.json();
       })
       .then(data => {
         //console.log(data);
         setBlogs(data);
-        setIsPending(false);
+        setIsPending(false); 
+        setError(null); // here, we remove the loading message
       })
-      .catch(err => {
-        //console.log(err.message)
-        setError(err.message);
+      .catch(err => { // this catch block catches network errors, it fires a function
+        //console.log(err.message) this can catch some network errors but not all
+        setIsPending(false);
+        setError(err.message); // this sets our own custom error message but we need to get rid of the loading... message once it's loaded with  setError(null), above
       })
     }, 1000) // setTimeout is just a simulation so we simulate a longer timeframe to fetch data
    
@@ -69,8 +75,8 @@ const Home = () => {
       { error && <div>{ error} </div> }
       {isPending && <div>Loading...</div>}
       {blogs && <BlogList
-        blogs={blogs}
-        title="All Blogs!" />}
+        blogs={blogs} 
+        title="All Blogs!"/>}
 
       {isPending && <div>Loading...</div>}
       {blogs && <BlogList
