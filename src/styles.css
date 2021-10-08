@@ -20,6 +20,7 @@ body {
 
 .navbar .links {
   margin-left: auto;
+
 }
 
 .navbar a {
@@ -49,4 +50,9 @@ body {
   font-size: 20px;
   color: #c1a846;
   margin-bottom: 8px;
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color: #c5c5ab;
 }
