@@ -2,21 +2,45 @@
   "blogs": [
     {
       "title": "My First Blog",
-      "body": "Why do we use it?...blaha blsdkfj",
+      "body": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eveniet sed magni placeat! Et libero, vero sapiente eius voluptas repellendus quis quos officiis rerum expedita, amet eaque possimus reiciendis quidem?",
       "author": "mario",
       "id": 1
     },
     {
       "title": "Opening Party",
-      "body": "Why do we use it?...blaha blsdkfj",
+      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit corrupti debitis excepturi reprehenderit, accusamus eos aliquam. Iste ratione suscipit debitis consequatur obcaecati, veritatis provident. Deleniti nobis, inventore facere doloribus sunt tempore ex eos ut vero iure blanditiis quae beatae nesciunt quod dolore earum accusantium ipsam vel rerum ea. Molestiae velit, quo, sint quam ab temporibus sunt obcaecati eveniet laudantium possimus commodi autem? Minus, voluptatibus minima adipisci quo eveniet laudantium qui dolorum! Eius laborum qui quae consequuntur, quidem dolorem tempora hic? Illum nisi exercitationem inventore eligendi obcaecati nemo vitae quam vel facilis ut quasi, blanditiis ipsum dignissimos, qui excepturi aut consectetur quia facere deleniti tempora, aliquid vero voluptatem! Eveniet quos soluta itaque magni iusto natus tenetur vitae eum temporibus, ducimus ea voluptates quas eligendi necessitatibus repellat fuga ipsa. Corporis vitae eius facere, nobis iure modi quam beatae, dolore autem commodi vel ipsum, atque quisquam odit sint placeat quas eaque doloribus maiores libero voluptas! Aut natus ipsam ratione animi sequi ipsa dicta repellat debitis ducimus quam, dolorem qui vitae nisi itaque est. Quibusdam laudantium vel architecto quam aperiam sed aut tenetur, itaque error nostrum voluptatem consectetur id a quaerat laborum et cupiditate? Alias assumenda nisi animi porro libero tempora eum dolor. Ipsum!",
       "author": "yoshi",
       "id": 2
     },
     {
       "title": "Third Blog",
-      "body": "Why do we use it?...blaha blsdkfj",
+      "body": "Molestiae velit, quo, sint quam ab temporibus sunt obcaecati eveniet laudantium possimus commodi autem? Minus, voluptatibus minima adipisci quo eveniet laudantium qui dolorum! Eius laborum qui quae consequuntur, quidem dolorem tempora hic? Illum nisi exercitationem inventore eligendi obcaecati nemo vitae quam vel facilis ut quasi, blanditiis ipsum dignissimos, qui excepturi aut consectetur quia facere deleniti tempora, aliquid vero voluptatem! Eveniet quos soluta itaque magni iusto natus tenetur vitae eum temporibus, ducimus ea voluptates quas eligendi necessitatibus repellat fuga ipsa.",
       "author": "mario",
       "id": 3
+    },
+    {
+      "title": "miriams blog",
+      "body": "ddkklsjdjf sdkfjsl",
+      "author": "yoshi",
+      "id": 4
+    },
+    {
+      "title": "my new blog",
+      "body": "Deleniti nobis, inventore facere doloribus sunt tempore ex eos ut vero iure blanditiis quae beatae nesciunt quod dolore earum accusantium ipsam vel rerum ea. Molestiae velit, quo, sint quam ab temporibus sunt obcaecati eveniet laudantium possimus commodi autem? Minus, voluptatibus minima adipisci quo eveniet laudantium qui dolorum! Eius laborum qui quae consequuntur, quidem dolorem",
+      "author": "mario",
+      "id": 5
+    },
+    {
+      "title": "Jupiter is rising",
+      "body": "helixkdjf  fdksjfl f djfkds  fsdf dksjfklsjkj",
+      "author": "yoshi",
+      "id": 6
+    },
+    {
+      "title": "atomic dogs",
+      "body": " Eius laborum qui quae consequuntur, quidem dolorem tempora hic? Illum nisi exercitationem inventore eligendi obcaecati nemo vitae quam vel facilis ut quasi, blanditiis ipsum dignissimos, qui excepturi aut consectetur quia facere deleniti tempora, aliquid vero voluptatem!",
+      "author": "yoshi",
+      "id": 7
     }
   ]
 }
