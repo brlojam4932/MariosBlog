@@ -56,3 +56,18 @@ body {
   text-decoration: none;
   color: #c5c5ab;
 }
+
+/* blog details page */
+
+.blog-details div h2 {
+  font-size: 20px;
+  color: #c5c5ab;
+  margin-bottom: 10px;
+}
+
+.blog-details div {
+  margin: 20px 0;
+}
+
+
+
