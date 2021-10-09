@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BlogList from "./BlogList";
-import CondRen from "./condRend";
+import CondRen from "./conditionalRender";
 import useFetch from "./useFetch";
 // here we set up a watch something...
 // npx json-server --watch src/data/db.json --port 8000

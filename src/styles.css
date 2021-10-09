@@ -41,8 +41,15 @@ body {
   color: rgb(157, 157, 225);
 }
 
-/* blog previews */
+/* blog previews / list /https://youtu.be/tHjxSVaj_wY?t=309 */ 
 .blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #433d3d;
+  
+}
+
+.blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
