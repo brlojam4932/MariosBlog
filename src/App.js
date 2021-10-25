@@ -6,6 +6,8 @@ import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 
+// npx json-server --watch src/data/db.json --port 8000
+
 export default function App() {
   //const person = { name: " ", age: ' ' };
   // person = key name, key age

@@ -15,19 +15,19 @@ const Home = () => {
 
 
   const handleClick = (e) => {
-    console.log("hello ninjas", e);
+    alert("hello ninjas", e);
   };
 
-  const handleClickMeAgain = (name, e) => {
-    console.log("Hello " + name, e.target);
+  const handleName = (name, e) => {
+    alert("Hello " + name, e.target);
   };
 
-  const handleThirdButton = () => {
+  const setInfoButton = () => {
     //names = "luigi";
     //console.log(names);
-    setNames("luigi");
+    setNames("Lucy");
     setAge(51);
-    console.log("you already clicked");
+    alert("you already clicked");
   };
 
   const { data: blogs , isPending, error } = useFetch('http://localhost:8000/blogs');
@@ -55,6 +55,9 @@ const Home = () => {
         title="Mario's Blogs" />}
 
       <button onClick={() => setNames("Luigi")}>Change name</button>
+      <button onClick={(e) => handleClick(e) } >Hello ninjas</button>
+      <button onClick={(e) => handleName("Ben",e)}>Handle Name</button>
+      <button onClick={()=> setInfoButton()} >Set Info</button>
       <p>{names} </p>
       <CondRen />
     </div>

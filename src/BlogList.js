@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BlogList = ({ blogs, title }) => {
   //const blogs = props.blogs;
-  //console.log(props, blogs);
+  //console.log(props. blogs);
   //const title = props.title; // deconstructed
 
   return (
